@@ -3,7 +3,7 @@
 
 class CfgPatches
 {
-  class bloodsplatter
+  class BloodSplatter
   {
     units[] = {};
       weapons[] = {};
@@ -18,9 +18,9 @@ class CfgPatches
 
     class Extended_PreInit_EventHandlers
     {
-      class bloodsplatter_PreInit
+      class BloodSplatter_PreInit
       {
-        init = "call compile preprocessFileLineNumbers '\bloodsplatter\scripts\Init.sqf';";
+        init = "call compile preprocessFileLineNumbers '\BloodSplatter\Scripts\Init.sqf';";
       };
     };
 
@@ -28,7 +28,7 @@ class CfgPatches
     {
       class CAManBase
       {
-        class bloodsplatter_Init
+        class BloodSplatter_Init
         {
           init = "[_this select 0] call BloodLust_InitUnit;";
         };
@@ -36,7 +36,7 @@ class CfgPatches
 
       class AllVehicles
       {
-        class bloodsplatter_Init
+        class BloodSplatter_Init
         {
           init = "[_this select 0] call BloodLust_InitVehicle;";
         };
@@ -47,7 +47,7 @@ class CfgPatches
     {
       class CAManBase
       {
-        class bloodsplatter_Respawn
+        class BloodSplatter_Respawn
         {
           respawn = "_this call BloodLust_OnUnitRespawn;";
         };
@@ -56,9 +56,9 @@ class CfgPatches
 
     class CfgCoreData
     {
-    	slopBlood="bloodsplatter\models\plane\bloodsplatter_plane.p3d";
-    	footStepBleeding0="bloodsplatter\models\plane\bloodsplatter_plane.p3d";
-    	footStepBleeding1="bloodsplatter\models\plane\bloodsplatter_plane.p3d";
+    	slopBlood="BloodSplatter\Models\Plane\BloodSplatter_Plane.p3d";
+    	footStepBleeding0="BloodSplatter\Models\Plane\BloodSplatter_Plane.p3d";
+    	footStepBleeding1="BloodSplatter\Models\Plane\BloodSplatter_Plane.p3d";
     };
 
     class CfgVehicles
@@ -77,249 +77,249 @@ class CfgPatches
                       impactEffectsNoBlood = "ImpactEffectsBlood";
                     };
 
-                    class bloodsplatter_plane : NonStrategic
+                    class BloodSplatter_Plane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\plane\bloodsplatter_plane.p3d";
+                      model = "\BloodSplatter\Models\Plane\BloodSplatter_Plane.p3d";
                       displayName = "Blood Splatter";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_plane" };
+                      hiddenSelections[] = { "BloodSplatter_Plane" };
                     };
 
-                    class bloodsplatter_tinyplane : NonStrategic
+                    class BloodSplatter_TinyPlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\tinyplane\bloodsplatter_tinyplane.p3d";
+                      model = "\BloodSplatter\Models\TinyPlane\BloodSplatter_TinyPlane.p3d";
                       displayName = "Blood Splatter";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_plane" };
+                      hiddenSelections[] = { "BloodSplatter_Plane" };
                     };
 
-                    class bloodsplatter_smallplane : NonStrategic
+                    class BloodSplatter_SmallPlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\smallplane\bloodsplatter_smallplane.p3d";
+                      model = "\BloodSplatter\Models\SmallPlane\BloodSplatter_SmallPlane.p3d";
                       displayName = "Blood Splatter";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_plane" };
+                      hiddenSelections[] = { "BloodSplatter_Plane" };
                     };
 
-                    class bloodsplatter_mediumplane : NonStrategic
+                    class BloodSplatter_MediumPlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\mediumplane\bloodsplatter_mediumplane.p3d";
+                      model = "\BloodSplatter\Models\MediumPlane\BloodSplatter_MediumPlane.p3d";
                       displayName = "Blood Splatter";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_plane" };
+                      hiddenSelections[] = { "BloodSplatter_Plane" };
                     };
 
-                    class bloodsplatter_largeplane : NonStrategic
+                    class BloodSplatter_LargePlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\largeplane\bloodsplatter_largeplane.p3d";
+                      model = "\BloodSplatter\Models\LargePlane\BloodSplatter_LargePlane.p3d";
                       displayName = "Blood Splatter";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_plane" };
+                      hiddenSelections[] = { "BloodSplatter_Plane" };
                     };
 
-                    class bloodsplatter_sprayplane : NonStrategic
+                    class BloodSplatter_SprayPlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\sprayplane\bloodsplatter_sprayplane.p3d";
+                      model = "\BloodSplatter\Models\SprayPlane\BloodSplatter_SprayPlane.p3d";
                       displayName = "Blood Spray";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_sprayplane" };
+                      hiddenSelections[] = { "BloodSplatter_SprayPlane" };
                     };
 
-                    class bloodsplatter_smallsprayplane : NonStrategic
+                    class BloodSplatter_SmallSprayPlane : NonStrategic
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\smallsprayplane\bloodsplatter_smallsprayplane.p3d";
+                      model = "\BloodSplatter\Models\SmallSprayPlane\BloodSplatter_SmallSprayPlane.p3d";
                       displayName = "Blood Spray";
                       faction = "Default";
                       vehicleClass = "Misc";
-                      hiddenSelections[] = { "bloodsplatter_sprayplane" };
+                      hiddenSelections[] = { "BloodSplatter_SprayPlane" };
                     };
 
-                    class bloodsplatter_LeftHand : Thing
+                    class BloodSplatter_LeftHand : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_LeftHand.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_LeftHand.p3d";
                       weight = 5;
                     };
 
-                    class bloodsplatter_LeftLowerArm : Thing
+                    class BloodSplatter_LeftLowerArm : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_LeftLowerArm.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_LeftLowerArm.p3d";
                       weight = 20;
                     };
 
-                    class bloodsplatter_LeftLowerLegAndFoot : Thing
+                    class BloodSplatter_LeftLowerLegAndFoot : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_LeftLowerLegAndFoot.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_LeftLowerLegAndFoot.p3d";
                       weight = 40;
                     };
 
-                    class bloodsplatter_LeftUpperArm : Thing
+                    class BloodSplatter_LeftUpperArm : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_LeftUpperArm.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_LeftUpperArm.p3d";
                       weight = 15;
                     };
 
-                    class bloodsplatter_LeftUpperLeg : Thing
+                    class BloodSplatter_LeftUpperLeg : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_LeftUpperLeg.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_LeftUpperLeg.p3d";
                       weight = 35;
                     };
 
-                    class bloodsplatter_Pelvis : Thing
+                    class BloodSplatter_Pelvis : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_Pelvis.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_Pelvis.p3d";
                       weight = 20;
                     };
 
-                    class bloodsplatter_RightFoot : Thing
+                    class BloodSplatter_RightFoot : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightFoot.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightFoot.p3d";
                       weight = 15;
                     };
 
-                    class bloodsplatter_RightHand : Thing
+                    class BloodSplatter_RightHand : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightHand.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightHand.p3d";
                       weight = 10;
                     };
 
-                    class bloodsplatter_RightIndexFinger : Thing
+                    class BloodSplatter_RightIndexFinger : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightIndexFinger.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightIndexFinger.p3d";
                       weight = 3;
                     };
 
-                    class bloodsplatter_RightMiddleFinger : Thing
+                    class BloodSplatter_RightMiddleFinger : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightMiddleFinger.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightMiddleFinger.p3d";
                       weight = 3;
                     };
 
-                    class bloodsplatter_RightPinkyFinger : Thing
+                    class BloodSplatter_RightPinkyFinger : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightPinkyFinger.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightPinkyFinger.p3d";
                       weight = 3;
                     };
 
-                    class bloodsplatter_RightRingFinger : Thing
+                    class BloodSplatter_RightRingFinger : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightRingFinger.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightRingFinger.p3d";
                       weight = 3;
                     };
 
-                    class bloodsplatter_RightThumb : Thing
+                    class BloodSplatter_RightThumb : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightThumb.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightThumb.p3d";
                       weight = 3;
                     };
 
-                    class bloodsplatter_RightUpperArm : Thing
+                    class BloodSplatter_RightUpperArm : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightUpperArm.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightUpperArm.p3d";
                       weight = 15;
                     };
 
-                    class bloodsplatter_RightLowerArm : Thing
+                    class BloodSplatter_RightLowerArm : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightLowerArm.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightLowerArm.p3d";
                       weight = 15;
                     };
 
-                    class bloodsplatter_RightUpperLeg : Thing
+                    class BloodSplatter_RightUpperLeg : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightUpperLeg.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightUpperLeg.p3d";
                       weight = 30;
                     };
 
-                    class bloodsplatter_RightLowerLeg : Thing
+                    class BloodSplatter_RightLowerLeg : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_RightLowerLeg.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_RightLowerLeg.p3d";
                       weight = 30;
                     };
 
-                    class bloodsplatter_Torso : Thing
+                    class BloodSplatter_Torso : Thing
                     {
                       scope = 1;
                       author = "Gavin N. Alvesteffer";
                       destrType = "DestructNo";
-                      model = "\bloodsplatter\models\gibs\bloodsplatter_Torso.p3d";
+                      model = "\BloodSplatter\Models\Gibs\BloodSplatter_Torso.p3d";
                       weight = 50;
                     };
                   };
@@ -347,5 +347,5 @@ class CfgPatches
                   class RscHTML;
                   class VScrollbar;
                   class HScrollbar;
-                  #include "dialogs\BloodLust_SettingsManager.h"
-                  #include "dialogs\BloodLust_InterruptMenu.h"
+                  #include "Dialogs\BloodLust_SettingsManager.h"
+                  #include "Dialogs\BloodLust_InterruptMenu.h"

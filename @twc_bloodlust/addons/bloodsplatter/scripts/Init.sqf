@@ -4,31 +4,31 @@
 BloodLust_IsInitialized = false;
 
 //Core.
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\Configurables.sqf";
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\Helpers.sqf";
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\EventHooks.sqf";
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\Core.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\Configurables.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\Helpers.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\EventHooks.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\Core.sqf";
 if(isMultiplayer || BloodLust_IsMultiplayerCoreEnabledInSingleplayer) then
 {
-    call compile preprocessFileLineNumbers "bloodsplatter\scripts\CoreMultiplayer.sqf";
-    call compile preprocessFileLineNumbers "bloodsplatter\scripts\ConfigurablesMultiplayer.sqf"; //Server can override client settings in this script.
+    call compile preprocessFileLineNumbers "BloodSplatter\Scripts\CoreMultiplayer.sqf";
+    call compile preprocessFileLineNumbers "BloodSplatter\Scripts\ConfigurablesMultiplayer.sqf"; //Server can override client settings in this script.
 };
 
 //Effects.
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\Effects\GoreMist.sqf";
-call compile preprocessFileLineNumbers "bloodsplatter\scripts\Effects\Refraction.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\Effects\GoreMist.sqf";
+call compile preprocessFileLineNumbers "BloodSplatter\Scripts\Effects\Refraction.sqf";
 
-//dialogs.
-call compile preprocessFileLineNumbers "bloodsplatter\dialogs\BloodLust_SettingsManager.sqf";
+//Dialogs.
+call compile preprocessFileLineNumbers "BloodSplatter\Dialogs\BloodLust_SettingsManager.sqf";
 
 //Preload textures.
 if(BloodLust_IsTexturePreloadingEnabled) then
 {
-    execVM "bloodsplatter\scripts\Preload.sqf";
+    execVM "BloodSplatter\Scripts\Preload.sqf";
 };
 
 //BloodLust Clean-up.
-execVM "bloodsplatter\scripts\Cleanup.sqf";
+execVM "BloodSplatter\Scripts\Cleanup.sqf";
 
 //A flag that BloodLust is ready for others to add their event handlers and stuff.
 BloodLust_IsInitialized = true;
