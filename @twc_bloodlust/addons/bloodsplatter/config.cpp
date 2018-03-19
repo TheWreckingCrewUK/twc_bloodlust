@@ -347,5 +347,5 @@ class CfgPatches
                   class RscHTML;
                   class VScrollbar;
                   class HScrollbar;
-                  #include "Dialogs\BloodLust_SettingsManager.h"
-                  #include "Dialogs\BloodLust_InterruptMenu.h"
+                  #include "dialogs\BloodLust_SettingsManager.h"
+                  #include "dialogs\BloodLust_InterruptMenu.h"
