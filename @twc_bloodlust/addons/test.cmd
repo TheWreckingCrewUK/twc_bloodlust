@@ -1,3 +1,0 @@
-makePbo  -ABP bloodsplatter\
-
-PAUSE
